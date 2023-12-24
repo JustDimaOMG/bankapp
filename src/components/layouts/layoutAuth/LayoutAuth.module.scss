@@ -1,0 +1,10 @@
+@import '../../../assets/styles/variables';
+
+.signIn{
+width: 100vw;
+}
+.container{
+  margin: 0 auto;
+  max-width: $mobile;
+  box-shadow: $bx-accent;
+}
