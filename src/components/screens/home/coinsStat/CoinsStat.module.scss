@@ -1,0 +1,23 @@
+@import 'assets/styles/_variables.scss';
+
+.coinsStatBlock{
+  border-radius: 15px;
+  width: 330px;
+  box-shadow: $bx-accent;
+  padding: 15px;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+}
+
+
+.liImage{
+
+  a{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  
+
+}

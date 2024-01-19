@@ -1,0 +1,66 @@
+@import 'assets/styles/_variables.scss';
+
+.halvingCounter {
+  border-radius: 15px;
+  width: 330px;
+  box-shadow: $bx-accent;
+  padding: 15px;
+  position: relative;
+
+  .innerBlock {
+    display: block;
+
+    .textBlock {
+      display: flex;
+
+      h6 {
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: flex;
+        height: 100%;
+        align-items: center;
+      }
+
+      .iconQues {
+        margin-left: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        
+
+        &:hover {
+          color: $yellow;
+          background-color: black;
+          border-radius: 25px;
+
+        }
+      }
+
+      .questPopUp {
+        display: block;
+        position: absolute;
+        left: 70%; 
+        top: 0;
+        padding: 5px;
+        box-shadow: $bx-accent;
+        border-radius: 5px;
+        font-size: 12px;
+        width: 250px;
+      }
+    }
+
+    .countdown {
+      display: flex;
+      font-size: 16px;
+
+      p {
+        font-weight: 600;
+        margin-right: 10px;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+  }
+}

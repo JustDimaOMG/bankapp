@@ -1,0 +1,18 @@
+.footer{
+  padding: 15px;
+  padding-inline: 0px;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  .footerUl{
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-weight: 600;
+    .footerLi{
+      margin-right: 50px;
+    }
+  }
+
+}

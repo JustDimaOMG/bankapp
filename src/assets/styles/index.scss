@@ -23,8 +23,9 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 a{color:inherit;}
 
-*,html,body {
-  height: 100vh;
+html, body {
   width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
+  font-size: $default-font;
 }

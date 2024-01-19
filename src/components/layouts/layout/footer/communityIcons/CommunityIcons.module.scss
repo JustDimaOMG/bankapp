@@ -1,0 +1,23 @@
+.container{
+  width: 140px;
+  margin-top: 20px;
+}
+.iconList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 16px; 
+}
+
+.iconList a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #333; 
+  transition: color 0.3s ease;
+  font-size: 22px;
+}
+
+.iconList a:hover {
+  color: grey; 
+}

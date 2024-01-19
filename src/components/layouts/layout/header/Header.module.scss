@@ -1,0 +1,103 @@
+@import '../../../../assets/styles/variables';
+
+.navBarCont{
+  display: flex;
+  padding: 15px;
+  padding-inline: 30px;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  .mainBar{
+    display: flex;
+  }
+
+  .logo{
+    font-size: 22px;
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+
+      img{
+        width: 30px;
+      }
+      h2{
+        font-weight: 600;
+      }
+    }
+  }
+  .navLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    ul{
+      display: flex;
+      gap: 30px;
+      li{
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 5px;
+
+        &:hover{
+          color: $yellow;
+        }
+      }
+
+    }
+  }
+  .rightNav{
+    display: flex;
+    align-items: center;
+
+    .iconMoon{
+      transform: rotate(220deg);
+      font-size: 22px;
+    }
+    .iconSun{
+      font-size: 22px;
+    }
+
+  }
+  .blockAuth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    a{
+      font-weight: 600;
+      font-size: 16px;
+
+      &:nth-child(1){
+        color: darken($yellow, 20%);
+        border: 1px solid darken($yellow, 20%);
+        padding: 6px;
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-right: 10px;
+
+        &:hover{
+          border: 1px solid $yellow;
+          color: $yellow
+        }
+      }
+      &:last-child{
+        background-color: darken($yellow, 20%);
+        color: white;
+        padding: 6px;
+        border-radius: 10px;
+        &:hover{
+          background-color: $yellow;
+        }
+      }
+    }
+  }
+
+
+}
