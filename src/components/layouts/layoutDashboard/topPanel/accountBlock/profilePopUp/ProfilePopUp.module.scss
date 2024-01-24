@@ -1,0 +1,21 @@
+@import '../../../../../../assets//styles/variables';
+
+.container{
+  box-shadow: $bx-accent;
+  padding: 10px;
+  border-radius: 10px;
+  font-style: 14px;
+  ul{
+
+    li{
+      width: 53px;
+      margin-bottom: 5px;
+      &:last-child{
+        margin-bottom: 0px;
+      }
+      &:hover{
+        font-weight: 600;
+      }
+    }
+  }
+}

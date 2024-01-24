@@ -5,12 +5,17 @@ import { nanoid } from 'nanoid'
 
 import { TOKEN } from '../constants/app.constants'
 
+
 export const UsersService = {
+
+
 	async PostUser(userData: ILogUser) {
 		const newUser = {
 			id: nanoid(12),
 			username: userData.username,
 			password: userData.password,
+			firstName: '',
+			lastName: '',
 			img: ''
 		}
 		try {

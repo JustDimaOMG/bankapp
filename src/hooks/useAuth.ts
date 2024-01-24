@@ -40,8 +40,9 @@ export const UseAuth = () => {
 			) {
 				console.log(data)
 			} else {
-				actions.login()
-				navigate('/dashboard')
+				actions.login({firstName: `${data.firstName}` || '', lastName: `${data.lastName}` || '', img: `${data.img}` || '/src/assets/photo/guessProfile.svg' })
+				navigate('/dashboard/overview')
+				
 			}
 		},
 		onError: error => {

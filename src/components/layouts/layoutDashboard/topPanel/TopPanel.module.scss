@@ -1,0 +1,25 @@
+@import '../../../../assets/styles/variables';
+
+.container{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  .infoBlock{
+
+    h1{
+      font-size: 44px;
+      color: black;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    span{
+      font-size: 16px;
+      color: $light-accent
+    }
+  }
+  .profileBlock{
+    display: flex;
+    align-items: center;
+  }
+}

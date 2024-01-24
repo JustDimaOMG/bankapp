@@ -17,6 +17,7 @@ const SignUp = () => {
 
 	const handleTypeChange = (newType: string) => {
 		setType(newType)
+		setEmail('')
 	}
 
 	return (

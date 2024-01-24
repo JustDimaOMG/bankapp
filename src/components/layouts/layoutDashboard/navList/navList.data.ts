@@ -6,7 +6,7 @@ type INavList = {
   icon: string
 }[]
 
-export const navList:INavList = [
+export const navListData:INavList = [
   {
     title: 'Overview',
     path: '/overview',

@@ -1,15 +1,19 @@
 {
   "users": [
     {
-      "id": "XbZpCup-DnN8",
+      "id": "-wSNVb0_sN4e",
       "username": "dima@gmail.com",
       "password": "12345",
-      "img": ""
+      "firstName": "Dima",
+      "lastName": "Degtyar",
+      "img": "/src/assets/photo/admin.jpeg"
     },
     {
-      "id": "AzNYzVOdMcoO",
-      "username": "diamdeg2202@gmail.com",
-      "password": "dfgdfgdfg",
+      "id": "msJgyJad6jcr",
+      "username": "diam@gmail.com",
+      "password": "12345",
+      "firstName": "",
+      "lastName": "",
       "img": ""
     }
   ],

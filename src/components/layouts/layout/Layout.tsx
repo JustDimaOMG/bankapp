@@ -16,17 +16,17 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className={s.authLayout}>
-      <div className={s.header}>
+      <header className={s.header}>
         <UserNavBar  />
-      </div>
-      <div className={s.container}>
+      </header>
+      <main className={s.container}>
         {children}
-      </div>
-      <div className={s.footer}>
+      </main>
+      <footer className={s.footer}>
         {isHomePage &&
           <Footer/>
         }
-      </div>
+      </footer>
     </div>
 
   );
