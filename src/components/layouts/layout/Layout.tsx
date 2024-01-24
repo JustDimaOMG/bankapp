@@ -2,32 +2,34 @@ import  { FC, ReactNode } from 'react';
 import s from './Layout.module.scss';
 import UserNavBar from './header/Header';
 import Footer from './footer/Footer';
+import { useLocation } from 'react-router-dom';
 
-interface LayoutAuthProps {
+interface LayoutProps {
   children: ReactNode;
 }
 
-const LayoutAuth: FC<LayoutAuthProps> = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
 
 
-
+  const location = useLocation()
+  const isHomePage = location.pathname ==='/'
 
   return (
-    <>
     <div className={s.authLayout}>
       <div className={s.header}>
-        <UserNavBar/>
+        <UserNavBar  />
       </div>
       <div className={s.container}>
         {children}
       </div>
       <div className={s.footer}>
-        <Footer/>
+        {isHomePage &&
+          <Footer/>
+        }
       </div>
     </div>
-    </>
 
   );
 };
 
-export default LayoutAuth;
+export default Layout;

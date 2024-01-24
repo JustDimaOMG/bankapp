@@ -7,7 +7,7 @@ export const useCoinElement = (name: string) => {
     queryKey: [`${name}`],
     queryFn: () => GetCoinService.getCoin(name),
     enabled: true,
-    refetchInterval: 30000, 
+    refetchInterval: 60000, 
   });
 
   useEffect(() => {

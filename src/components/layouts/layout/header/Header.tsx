@@ -21,10 +21,10 @@ const UserNavBar = () => {
 					</div>
 					<div className={s.navLinks}>
 						<ul>
-							<li>Купить валюту</li>
+							<li>Buy currency</li>
 							<li>NFT</li>
 							<li>Web3</li>
-							<li>Новости</li>
+							<li>News</li>
 						</ul>
 					</div>
 				</div>

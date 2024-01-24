@@ -1,0 +1,16 @@
+@import '../../../assets//styles//variables';
+
+.container{
+
+
+  .sideBlock{
+    position: fixed;
+    z-index: 100;
+    width: 250px;
+    height: 100vh;
+    border-radius: 25px ;
+    -webkit-box-shadow: 5px 0px 8px -4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 5px 0px 8px -4px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 0px 8px -4px rgba(0, 0, 0, 0.2);
+  }
+}

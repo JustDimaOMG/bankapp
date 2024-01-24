@@ -2,12 +2,17 @@ import styles from './OrangeBtn.module.scss'
 
 type Props = {
   text:string
-  type: "button" | "submit" | "reset"
+  type: "button" | "submit" | "reset",
+  fontSize?: string,
+  pInline?:string,
+  padding?:string,
+  width?: string,
+  onClick?: () => void
 }
 
 const OrangeBtn = (props: Props) => {
   return (
-    <button className={styles.container} type={props.type}>
+    <button className={styles.container} type={props.type} style={{fontSize: `${props.fontSize}`,padding: `${props.padding}`,paddingInline: `${props.pInline}`, width: `${props.width}` }} onClick={props.onClick}>
       {props.text}
     </button>
   )

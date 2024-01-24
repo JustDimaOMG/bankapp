@@ -12,7 +12,10 @@ export default defineConfig({
       hooks: '/src/hooks',
       services: '/src/services',
       assets: '/src/assets',
-      api: '/src/api'
+      api: '/src/api',
+      routes: '/src/routes',
+      auth: '/src/auth',
+      store: '/src/store',
     }
   }
 })

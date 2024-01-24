@@ -1,9 +1,23 @@
 
-
 export interface IUser{
   id: string,
   username: string,
   password:string,
+  img:string,
+  // cards:[],
+  // transactions:[],
+  // goals:[],
+}
+
+export interface ILogUser {
+  username: string,
+  password: string
+}
+
+export interface IUpdUser {
+  id: string,
+  username?: string,
+  password?:string,
   img?:string,
   cards?:{
     cardNumber: number,

@@ -1,13 +1,15 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { routes } from './routers.data.js'
-import { useAuth } from '../auth/AuthWrapper.js';
+import { useSelector } from 'react-redux';
 
 
 
 
 
 const Router = () => {
-  const { logUser } = useAuth()
+
+  const isAuth = useSelector((state) => state.auth.userState.isAuth)
+
 
   return (
     <BrowserRouter>
@@ -16,7 +18,7 @@ const Router = () => {
           <Route
             key={route.path}
             path={route.path}
-            element={route.isAuth && !logUser.isAuth ? <Navigate to="/" /> : <route.component />}
+            element={route.isAuth && !isAuth ? <Navigate to="/login" /> : <route.component />}
           />
         ))}
       </Routes>

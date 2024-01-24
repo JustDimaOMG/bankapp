@@ -1,53 +1,62 @@
-import { createContext, useContext, useState } from 'react'
 
-import  users  from '../data/usersData/Users.data.js'
-import { IUser } from '../interfaces/IUser.js'
-import Router from '../routes/Router.js'
+import { createContext, useContext, useState } from "react"
+
+import {users} from 'data/usersData/Users.data'
+import { IAuth, IAuthContext  } from "interfaces/IAuth";
+import Router from "routes/Router";
+
+const myContext = createContext<IAuthContext | null>(null);
 
 
+export const AuthData = () => useContext(myContext);
 
-const myContext = createContext(undefined)
 
-export const useAuth = () => useContext(myContext)
+export const AuthWrapper = () => {
 
-export const Auth = () => {
-	const [logUser, setLogUser] = useState({
-		username: '',
-		isAuth: false
-	})
+  const [user, setUser] = useState(
+    {
+      name: '',
+      isAuth: false,
+    }
+  )
 
-	const login = async (
+  const login = async ({username, password}:IAuth) =>{
 
-	) => {
-		try {
-			const userProfile = users.find(
-				profile => profile.username === credentials.username
-			)
+    try{
+      const userProfile = users.find(user => user.username === username)
 
-			if (userProfile) {
-				if (userProfile.password === credentials.password) {
-					setLogUser({
-						username: credentials.username,
-						isAuth: true
-					})
-				} else {
-					console.log('Inorrect password')
-				}
-			} else {
-				console.log('User not found')
-			}
-		} catch (error) {
-			console.log(error)
-		}
-	}
+      if (userProfile){
+        if (userProfile.password === password){
+          setUser({
+            name: username,
+            isAuth: true,
+          })
+          
+        }
+        else {
+          console.log('Inorrect password')
+        }
+      }
+      else {
+        console.log('User not found');
+      }
+    }
+    catch (error){
+      console.log(error);
+    }
+  }
 
-	const logout = async () => {
-		setLogUser({ ...logUser, isAuth: false })
-	}
+  const logout = async () =>{
 
-	return (
-		<myContext.Provider value={{ logUser, login, logout }}>
-			<Router />
-		</myContext.Provider>
-	)
+    setUser({...user, isAuth: false})
+  }
+
+
+  return (
+    <myContext.Provider value={{user, login, logout}}>
+
+      <Router/>
+
+    </myContext.Provider>
+  )
 }

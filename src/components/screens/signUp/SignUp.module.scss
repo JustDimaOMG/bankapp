@@ -1,0 +1,15 @@
+.container{
+  width: 280px;
+  margin: 0 auto;
+
+  h1{
+    font-size: 34px;
+    font-weight: 600;
+  }
+  form{
+    margin-top: 20px;
+    .inputsCont{
+      margin-bottom: 20px;
+    }
+  }
+}

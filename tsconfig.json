@@ -29,6 +29,10 @@
       "services/*": ["services/*"],
       "assets/*": ["assets/*"],
       "api/*": ["api/*"],
+      "routes/*": ["routes/*"],
+      "auth/*": ["auth/*"],
+      "store/*": ["store/*"],
+
     }
 
   },
