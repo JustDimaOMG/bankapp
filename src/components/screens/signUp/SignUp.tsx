@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom'
 import s from './SignUp.module.scss'
 
 const SignUp = () => {
-	const { errors, handleSubmit, onSubmit, register, setType, isPending } = UseAuth()
+	const { errors, handleSubmit, onSubmit, register, setType, error } = UseAuth()
 
 	const location = useLocation()
 	const searchParams = new URLSearchParams(location.search)
@@ -58,6 +58,11 @@ const SignUp = () => {
 							placeholder='Enter password'
 						/>
 					</div>
+					{error && 
+						<span className='errorData' >
+							{error}
+						</span>
+					}
 					<OrangeBtn
 						text={'SignUp'}
 						type={'submit'}

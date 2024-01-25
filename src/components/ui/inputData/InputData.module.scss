@@ -22,6 +22,7 @@
   margin-bottom: 10px;
 }
 .passCont{
+
   .inputContainer{
     padding: 15px;
     padding-inline: 10px;
@@ -33,13 +34,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &:hover{
-      outline: solid 2px $yellow;
-    }
     &:focus{
       outline: solid 2px $yellow;
     }
+    &:hover{
+      outline: solid 2px $yellow;
+    }
+
+    
     .inputPass{
       width: 100%;
       background-color: transparent;

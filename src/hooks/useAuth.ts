@@ -1,9 +1,8 @@
 import { useMutation } from '@tanstack/react-query'
-import { useActions } from 'hooks/useActions'
+import { useActions, useAppSelector } from 'hooks/useActions'
 import { ILogUser } from 'interfaces/IUser'
 import { useEffect, useMemo, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { UsersService } from 'services/Users.service'
 
@@ -15,9 +14,9 @@ type Inputs = {
 export const UseAuth = () => {
 	const actions = useActions()
 	const [type, setType] = useState<string>()
-	const isAuth = useSelector(state => state.auth.userState.isAuth)
+	const isAuth = useAppSelector(state => state.auth.userState.isAuth)
 	const navigate = useNavigate()
-
+	const [error, setError] = useState('')
 	const {
 		register,
 		handleSubmit,
@@ -38,11 +37,9 @@ export const UseAuth = () => {
 				typeof data === 'string' &&
 				(data.includes('already') || data.includes('exist') || data.includes('match')) 
 			) {
-				console.log(data)
+				setError(data)
 			} else {
-				actions.login({firstName: `${data.firstName}` || '', lastName: `${data.lastName}` || '', img: `${data.img}` || '/src/assets/photo/guessProfile.svg' })
-				navigate('/dashboard/overview')
-				
+				actions.login({firstName: `${data.firstName}` || '', lastName: `${data.lastName}` || '', img: `${data.img}` || '/src/assets/photo/guessProfile.svg' })				
 			}
 		},
 		onError: error => {
@@ -56,6 +53,13 @@ export const UseAuth = () => {
 		reset()
 	}
 
+	useEffect(() => {
+		if (isAuth){
+			navigate('/dashboard/overview')
+		}
+	},[isAuth])
+
+
 
 	return useMemo(
 		() => ({
@@ -63,8 +67,8 @@ export const UseAuth = () => {
 			register,
 			handleSubmit,
 			onSubmit,
-			isPending,
-			errors
+			errors,
+			error
 		}),
 		[errors, isPending]
 	)

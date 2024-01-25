@@ -1,19 +1,29 @@
 
 import { useActions } from 'hooks/useActions'
 import s from './ProfilePopUp.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 const ProfilePopUp = () => {
 
   const actions = useActions()
+  const navigate = useNavigate()
 
-  const handleClick = () =>{
+  const handleClickLogout = () =>{
     actions.logout()
-    
+    navigate('/')
+  }
+  const handleClickDashboard = () => {
+    navigate('/dashboard/overview')
   }
 
   return (
     <div className={s.container}>
       <ul>
+        <li>
+          <button onClick={() => handleClickDashboard()}>
+            Dashboard
+          </button>
+        </li>
         <li>
           <button>
             Profile
@@ -25,7 +35,7 @@ const ProfilePopUp = () => {
           </button>
         </li>
         <li>
-          <button onClick={() => handleClick() }>
+          <button onClick={() => handleClickLogout() }>
             Logout
           </button>
         </li>

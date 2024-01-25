@@ -1,8 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice,PayloadAction } from '@reduxjs/toolkit'
 import { AUTH, TOKEN } from '../constants/app.constants';
 import Cookies from 'js-cookie'
 
-interface AuthState {
+interface IAuthState {
   userState: {
     isAuth: boolean;
 		firstName: string,
@@ -11,12 +11,18 @@ interface AuthState {
   };
 }
 
+type TLogin = {
+	firstName:string,
+	lastName:string,
+	img: string
+}
+
 const initialValue = Cookies.get(AUTH) || false
 
 const localValue = localStorage.getItem('user')
 
 
-const initialState: AuthState = {
+const initialState: IAuthState = {
   userState: {
     isAuth:initialValue,
 		firstName: localValue ? JSON.parse(localValue).firstName : '',
@@ -29,13 +35,13 @@ const authSlice = createSlice({
 	name: 'auth',
 	initialState,
 	reducers: {
-		login(state, actions) {
+		login(state, action: PayloadAction<TLogin>) {
 			state.userState.isAuth = true
-			state.userState.firstName = actions.payload.firstName
-			state.userState.lastName = actions.payload.lastName
-			state.userState.img = actions.payload.img 
+			state.userState.firstName = action.payload.firstName
+			state.userState.lastName = action.payload.lastName
+			state.userState.img = action.payload.img 
 			Cookies.set(AUTH, true)
-			localStorage.setItem('user', JSON.stringify(actions.payload));			
+			localStorage.setItem('user', JSON.stringify(action.payload));			
 		},
 
 		logout(state) {

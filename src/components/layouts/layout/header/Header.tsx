@@ -1,13 +1,12 @@
-import { MdLightMode } from 'react-icons/md'
-import { MdNightlightRound } from 'react-icons/md'
+import ToggleMode from 'components/ui/toggleMode/ToggleMode'
 
 import s from './Header.module.scss'
-import { useState } from 'react'
-
+import { useSelector } from 'react-redux'
+import AccountBlock from 'components/layouts/layoutDashboard/topPanel/accountBlock/AccountBlock'
 
 const UserNavBar = () => {
 
-  const [darkMode, setDarkMode] = useState(false)
+	const isAuth = useSelector(state => state.auth.userState.isAuth)
 
 	return (
 		<>
@@ -28,15 +27,20 @@ const UserNavBar = () => {
 						</ul>
 					</div>
 				</div>
-				<div className={s.rightNav}>
+				{isAuth ? 
+					<div className={s.profileBlock}>
+						<AccountBlock/>
+					</div>
+				: 
+					<div className={s.rightNav}>
 					<div className={s.blockAuth}>
 						<a href='/login'>Log In</a>
 						<a href='/signup'>Sign Up</a>
 					</div>
-          <button onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? <MdNightlightRound className={s.iconMoon} /> : <MdLightMode className={s.iconSun} />}
-          </button>  
-				</div>
+					<ToggleMode />
+					</div>  
+				}
+
 			</div>
 		</>
 	)

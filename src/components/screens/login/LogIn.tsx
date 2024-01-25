@@ -6,11 +6,12 @@ import { UseAuth } from 'hooks/useAuth'
 import s from './Login.module.scss'
 
 const SignUp = () => {
-	const { errors, handleSubmit, onSubmit, register, setType, isPending } = UseAuth()
+	const { errors, handleSubmit, onSubmit, register, setType, error } = UseAuth()
 
 	const handleTypeChange = (newType: string) => {
-		setType(newType)
+		setType(newType)		
 	}
+
 
 	return (
 		<Layout>
@@ -47,6 +48,11 @@ const SignUp = () => {
 							placeholder='Enter password'
 						/>
 					</div>
+					{error && 
+						<span className='errorData' >
+							{error}
+						</span>
+					}
 					<OrangeBtn
 						text={'LogIn'}
 						type={'submit'}

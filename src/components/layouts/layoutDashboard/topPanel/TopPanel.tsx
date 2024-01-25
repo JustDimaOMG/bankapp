@@ -1,7 +1,7 @@
 import s from './TopPanel.module.scss'
 import AccountBlock from './accountBlock/AccountBlock'
 
-const TopPanel = (props: Props) => {
+const TopPanel = () => {
 	return (
     <div className={s.container}>
       <div className={s.infoBlock}>

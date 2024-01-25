@@ -5,10 +5,11 @@
   padding: 10px;
   border-radius: 10px;
   font-style: 14px;
+  background-color: white;
   ul{
-
+    width: 100%;
     li{
-      width: 53px;
+      min-width:74px;
       margin-bottom: 5px;
       &:last-child{
         margin-bottom: 0px;
