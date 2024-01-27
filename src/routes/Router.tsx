@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import { routes } from './routers.data.js'
-import { useSelector } from 'react-redux';
+import { useAppSelector } from 'hooks/useActions.js';
 
 
 
@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 
 const Router = () => {
 
-  const isAuth = useSelector((state) => state.auth.userState.isAuth)
+	const isAuth = useAppSelector(state => state.auth.userState.isAuth)
     
 
   return (

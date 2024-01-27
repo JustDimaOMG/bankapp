@@ -4,10 +4,14 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import * as authActions from 'store/authSlice'; 
 import { AppDispatch, RootState } from "store/store";
 import * as themeActions from 'store/themeSlice'; 
+import * as cardsActions from 'store/cardsSlice'; 
+import * as goalsActions from 'store/goalsSlice'; 
 
 const rootActions = {
   ...authActions,
-  ...themeActions
+  ...themeActions,
+  ...cardsActions,
+  ...goalsActions
 };
 
 export const useActions = () => {

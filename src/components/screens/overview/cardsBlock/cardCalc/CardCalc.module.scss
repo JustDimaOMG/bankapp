@@ -1,0 +1,67 @@
+@import '../../../../../assets/styles/variables';
+
+.container{
+
+  width: 150px;
+
+
+  .balance{
+    margin-bottom: 20px;
+    span{
+
+      &:first-child{
+        display: flex;
+        justify-content: end;
+        color: #197BBD;
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
+      &:last-child{
+        display: flex;
+        justify-content: end;
+        color: $light-accent;
+        font-size: 14px;
+      }
+    }
+  }
+  .income{
+    margin-bottom: 20px;
+    span{
+
+      &:first-child{
+        display: flex;
+        justify-content: end;
+        color: #439A86;
+        font-size: 22px;
+        margin-bottom: 5px;
+
+      }
+      &:last-child{
+        display: flex;
+        justify-content: end;
+        color: $light-accent;
+        font-size: 14px;
+      }
+    }
+  }
+  .outcome{
+    span{
+
+      &:first-child{
+        display: flex;
+        justify-content: end;
+        color: #BB4430;
+        font-size: 22px;
+        margin-bottom: 5px;
+
+      }
+      &:last-child{
+        display: flex;
+        justify-content: end;
+        color: $light-accent;
+        font-size: 14px;
+      }
+    }
+  }
+}

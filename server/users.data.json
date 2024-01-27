@@ -1,0 +1,101 @@
+{
+  "users": [
+    {
+      "id": "-wSNVb0_sN4e",
+      "username": "dima@gmail.com",
+      "password": "12345",
+      "firstName": "Dima",
+      "lastName": "Degtyar",
+      "img": "/src/assets/photo/admin.jpeg"
+    },
+    {
+      "id": "msJgyJad6jcr",
+      "username": "diam@gmail.com",
+      "password": "12345",
+      "firstName": "",
+      "lastName": "",
+      "img": ""
+    },
+    {
+      "id": "hvKeaANDbHnV",
+      "username": "dcsdcdsc@gmail.com",
+      "password": "34324324",
+      "firstName": "",
+      "lastName": "",
+      "img": ""
+    },
+    {
+      "id": "-VVBwUjaVavf",
+      "username": "dima4@gmail.com",
+      "password": "131231",
+      "firstName": "",
+      "lastName": "",
+      "img": ""
+    }
+  ],
+  "cards": [
+    {
+      "id": "-wSNVb0_sN4e",
+      "bank": "visa",
+      "cardNumber": "1234567890101490",
+      "cardHolder": "Dima Degtyar",
+      "expire": "06/21",
+      "balance": "2850.70",
+      "income": "1400",
+      "outcome": "340",
+      "limit": "4000"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "bank": "visa",
+      "cardNumber": "1234567855105679",
+      "cardHolder": "Dima Degtyar",
+      "expire": "09/29",
+      "balance": "2150.70",
+      "income": "1000",
+      "outcome": "0",
+      "limit": "4600"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "bank": "visa",
+      "cardNumber": "4504567890101112",
+      "cardHolder": "Dima Degtyar",
+      "expire": "01/30",
+      "balance": "5000.00",
+      "income": "3000",
+      "outcome": "4140",
+      "limit": "5000"
+    }
+  ],
+  "goals": [
+    {
+      "id":"-wSNVb0_sN4e",
+      "amount": "550",
+      "date": "13/10/24",
+      "icon": "1",
+      "title": "Holidays"
+    },
+    {
+      "id":"-wSNVb0_sN4e",
+      "amount": "1500",
+      "date": "9/08/24",
+      "icon": "4",
+      "title": "Renovation"
+    },
+    {
+      "id":"-wSNVb0_sN4e",
+      "amount": "400",
+      "date": "01/10/24",
+      "icon": "2",
+      "title": "Games"
+    },
+    {
+      "id":"-wSNVb0_sN4e",
+      "amount": "700",
+      "date": "13/03/24",
+      "icon": "3",
+      "title": "Hobbies"
+    }
+  ]
+}

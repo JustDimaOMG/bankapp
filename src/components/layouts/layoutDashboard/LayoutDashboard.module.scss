@@ -3,6 +3,7 @@
 .container{
   display: flex;
 
+
   .sideBlock{
     width: 250px;
     height: 100vh;
@@ -16,6 +17,9 @@
     .innerBlock{
       padding: 30px;
       padding-inline: 50px;
+      .lowerBlock {
+        margin-top: 45px;
+      }
     }
   }
 

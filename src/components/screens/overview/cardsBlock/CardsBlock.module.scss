@@ -1,0 +1,24 @@
+@import '../../../../assets//styles//variables';
+.container{
+  height: 365px;
+  box-shadow: $bx-accent;
+  border-radius: 25px;
+  padding: 25px;
+  padding-inline: 35px;
+
+
+
+  .cardInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -40px;
+
+
+    .divide{
+      background-color: $light-accent;
+      height: 200px;
+      width: 1px;
+    }
+  }
+}

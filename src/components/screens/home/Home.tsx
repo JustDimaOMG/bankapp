@@ -7,6 +7,7 @@ import styles from './Home.module.scss'
 import CoinsStat from './coinsStat/CoinsStat'
 import HalvingCounter from './halvingCounter/HalvingCounter'
 import { useNavigate } from 'react-router-dom'
+import SwiperCard from '../overview/cardsBlock/swiperCard/SwiperCard'
 
 const Home: FC = () => {
 	const [allUsers, setAllUsers] = useState<number>(0)

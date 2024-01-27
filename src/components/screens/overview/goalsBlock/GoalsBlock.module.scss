@@ -1,0 +1,29 @@
+.container{
+  display: block;
+  padding: 25px;
+  padding-inline: 35px;
+  .upperBlock{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    button{
+      color: black;
+      background-color: #FFC145;
+      font-size: 20px;
+      border-radius: 50px;
+      font-weight: 600;
+
+    }
+  }
+  .lowerBlock{
+    display: flex;
+
+    div{
+      margin-right: 40px;
+      &:last-child{
+        margin-right: 0px;
+      }
+    }
+  }
+}

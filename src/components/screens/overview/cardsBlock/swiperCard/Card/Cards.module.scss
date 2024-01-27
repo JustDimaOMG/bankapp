@@ -1,0 +1,46 @@
+@import '../../../../../../assets/styles//variables';
+
+.container{
+  width: 320px;
+  height: 206px;
+  padding: 20px;
+  background: url('/src/assets/photo/cardBack.svg')  ;
+  color: white;
+  box-shadow: $bx-accent;
+  border-radius: 25px;
+
+  .bankName{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .cardNumber{
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 32px;
+  }
+  .cardInform{
+    display: flex;
+    gap: 45px ;
+    .cardHolder{
+      font-size: 8px;
+      span{
+        font-size: 14px;
+        display: block;
+        margin-top: 6px;
+  
+      }
+    }
+    .expire{
+      font-size: 8px;
+      span{
+        font-size: 14px;
+        display: block;
+        margin-top: 6px;
+  
+      }
+    }
+  }
+
+}

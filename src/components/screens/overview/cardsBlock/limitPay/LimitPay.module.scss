@@ -1,0 +1,38 @@
+@import  '../../../../../assets/styles/variables';
+
+.container {
+  width: 320px;
+  height: 10px;
+  position: relative;  
+
+  .progressWidth {
+    width: 320px;
+    height: 10px;
+    background-color: #F1F1F1;
+    border-radius: 25px;
+  }
+
+  .progressBar {
+    height: 10px;
+    background-color: #197BBD;
+    border-radius: 25px;
+    position: absolute;  
+    bottom: 0;
+  }
+  .info{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    margin-top: 10px;
+    span{
+      font-size: 14px;
+
+      &:first-child{
+        color: $light-accent;
+      }
+      &:last-child{
+        font-weight: 500;
+      }
+    }
+  }
+}
