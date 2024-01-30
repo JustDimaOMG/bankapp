@@ -1,0 +1,34 @@
+@import '../../../../../../assets/styles/variables';
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  margin-bottom: 10px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+
+    li{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      padding: 2px;
+
+      &:active{
+        outline: 1px solid $extra-color;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+
+}
+
+.iconActive{
+  outline: 2px solid $extra-color;
+  border-radius: 5px;
+}

@@ -9,7 +9,7 @@ export const useGoalsBlock = async (setError: React.Dispatch<React.SetStateActio
   const id = Cookies.get(TOKEN) || '';
 
   const { data } = await useQuery({
-    queryKey: ["goals", id],
+    queryKey: ["goals"],
     queryFn: () => DashboardService.GetGoals(id),
   });
   

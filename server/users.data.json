@@ -31,6 +31,14 @@
       "firstName": "",
       "lastName": "",
       "img": ""
+    },
+    {
+      "id": "JlLWye3W9MmE",
+      "username": "diamgrg@gmail.com",
+      "password": "12345",
+      "firstName": "",
+      "lastName": "",
+      "img": ""
     }
   ],
   "cards": [
@@ -70,32 +78,11 @@
   ],
   "goals": [
     {
-      "id":"-wSNVb0_sN4e",
+      "id": "-wSNVb0_sN4e",
       "amount": "550",
       "date": "13/10/24",
       "icon": "1",
       "title": "Holidays"
-    },
-    {
-      "id":"-wSNVb0_sN4e",
-      "amount": "1500",
-      "date": "9/08/24",
-      "icon": "4",
-      "title": "Renovation"
-    },
-    {
-      "id":"-wSNVb0_sN4e",
-      "amount": "400",
-      "date": "01/10/24",
-      "icon": "2",
-      "title": "Games"
-    },
-    {
-      "id":"-wSNVb0_sN4e",
-      "amount": "700",
-      "date": "13/03/24",
-      "icon": "3",
-      "title": "Hobbies"
     }
   ]
 }

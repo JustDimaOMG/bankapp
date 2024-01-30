@@ -14,8 +14,7 @@ const goalsSlice = createSlice({
 	initialState,
 	reducers: {
     enterGoals(state, action){
-      state.goalState = action.payload
-      
+      state.goalState = action.payload      
     },
 	}
 })

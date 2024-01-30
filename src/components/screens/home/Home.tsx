@@ -1,20 +1,17 @@
 import Layout from 'components/layouts/layout/Layout'
-import InputData from 'components/ui/inputData/InputData'
-import OrangeBtn from 'components/ui/orangeBtn/OrangeBtn'
-import { FC, useState } from 'react'
+import OrangeBtn from 'components/ui/formBtn/FormBtn'
+import { FC, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { UsersService } from 'services/Users.service'
 
 import styles from './Home.module.scss'
 import CoinsStat from './coinsStat/CoinsStat'
 import HalvingCounter from './halvingCounter/HalvingCounter'
-import { useNavigate } from 'react-router-dom'
-import SwiperCard from '../overview/cardsBlock/swiperCard/SwiperCard'
 
 const Home: FC = () => {
 	const [allUsers, setAllUsers] = useState<number>(0)
 	const [email, setEmail] = useState<string>('')
-
 	const navigate = useNavigate()
-
 	const targetDate = new Date('2024-04-01T00:00:00')
 
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,12 +19,19 @@ const Home: FC = () => {
 	}
 
 	const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-		navigate(`/signup?email=${email}`);
-	};
-	
+		e.preventDefault()
+		navigate(`/signup?email=${email}`)
+	}
 
-
+	useEffect(() => {
+		UsersService.GetAllUsers()
+			.then(count => {
+				setAllUsers(count)
+			})
+			.catch(error => {
+				console.log(error)
+			})
+	}, [])
 
 	return (
 		<Layout>
@@ -35,12 +39,12 @@ const Home: FC = () => {
 				<div>
 					<h1 className={styles.mainText}>
 						<span>{allUsers}</span> <br />
-						пользователей
-						<br />
+						пользователей <br />
 						нам доверяет
 					</h1>
 					<form onSubmit={handleFormSubmit}>
-						<InputData
+						<input
+							className={styles.input}
 							type='text'
 							placeholder='Enter email'
 							value={email}

@@ -46,7 +46,7 @@
         margin-top: 5px;
 
         &:hover{
-          color: $yellow;
+          color: $extra-color;
         }
       }
 
@@ -69,25 +69,25 @@
       font-size: 16px;
 
       &:nth-child(1){
-        color: darken($yellow, 20%);
-        border: 1px solid darken($yellow, 20%);
+        color: $extra-color;
+        border: 1px solid $extra-color;
         padding: 6px;
         border-radius: 10px;
         margin-left: 20px;
         margin-right: 10px;
 
         &:hover{
-          border: 1px solid $yellow;
-          color: $yellow
+          border: 1px solid darken($extra-color, 10%);
+          color: darken($extra-color, 10%);
         }
       }
       &:last-child{
-        background-color: darken($yellow, 20%);
+        background-color: $extra-color;
         color: white;
         padding: 6px;
         border-radius: 10px;
         &:hover{
-          background-color: $yellow;
+          background-color: darken($extra-color, 10%);
         }
       }
     }

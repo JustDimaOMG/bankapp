@@ -2,11 +2,14 @@
 .container{
   display: flex;
   gap: 30px ;
+  z-index: 0;
 
 
 .leftSide{
   width: 600px;
-
+}
+.rightSide{
+  z-index: 0;
 }
 
 }

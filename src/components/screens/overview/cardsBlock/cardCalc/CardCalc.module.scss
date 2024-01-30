@@ -11,7 +11,7 @@
 
       &:first-child{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         color: #197BBD;
         font-weight: 600;
         font-size: 28px;
@@ -19,7 +19,7 @@
       }
       &:last-child{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         color: $light-accent;
         font-size: 14px;
       }
@@ -31,7 +31,7 @@
 
       &:first-child{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         color: #439A86;
         font-size: 22px;
         margin-bottom: 5px;
@@ -39,7 +39,7 @@
       }
       &:last-child{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         color: $light-accent;
         font-size: 14px;
       }
@@ -50,7 +50,7 @@
 
       &:first-child{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         color: #BB4430;
         font-size: 22px;
         margin-bottom: 5px;
@@ -58,7 +58,7 @@
       }
       &:last-child{
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         color: $light-accent;
         font-size: 14px;
       }

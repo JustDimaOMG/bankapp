@@ -3,7 +3,6 @@ import { IGoal } from 'interfaces/IGoal';
 import { icons } from 'data/icons.data';
 
 const GoalComp = (props: IGoal) => {
-  // Найти объект иконки по id
   const icon = icons.find((icon) => icon.id === props.icon);
 
   return (

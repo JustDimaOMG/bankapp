@@ -1,6 +1,6 @@
 import Layout from 'components/layouts/layout/Layout'
+import FormBtn from 'components/ui/formBtn/FormBtn'
 import InputData from 'components/ui/inputData/InputData'
-import OrangeBtn from 'components/ui/orangeBtn/OrangeBtn'
 import { UseAuth } from 'hooks/useAuth'
 
 import s from './Login.module.scss'
@@ -9,9 +9,8 @@ const SignUp = () => {
 	const { errors, handleSubmit, onSubmit, register, setType, error } = UseAuth()
 
 	const handleTypeChange = (newType: string) => {
-		setType(newType)		
+		setType(newType)
 	}
-
 
 	return (
 		<Layout>
@@ -23,6 +22,7 @@ const SignUp = () => {
 							error={errors?.username?.message}
 							name='username'
 							register={register}
+							autoComplete='email'
 							options={{
 								required: 'Email is required',
 								pattern: {
@@ -48,12 +48,8 @@ const SignUp = () => {
 							placeholder='Enter password'
 						/>
 					</div>
-					{error && 
-						<span className='errorData' >
-							{error}
-						</span>
-					}
-					<OrangeBtn
+					{error && <span className='errorData'>{error}</span>}
+					<FormBtn
 						text={'LogIn'}
 						type={'submit'}
 						fontSize={'18px'}

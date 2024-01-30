@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { GetCoinService } from 'services/GetCoin.service';
 
 export const useCoinElement = (name: string) => {
+
+
   const { data, refetch } = useQuery({
     queryKey: [`${name}`],
     queryFn: () => GetCoinService.getCoin(name),

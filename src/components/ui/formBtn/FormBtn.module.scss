@@ -3,9 +3,10 @@
 .container{
   border-radius: 10px;
   font-size: 18px;
-  background-color: $yellow;
+  background-color: $extra-color;
+  color: white;
 
   &:hover{
-    background-color: darken($yellow, 10%);
+    background-color: darken($extra-color, 10%);
   }
 }

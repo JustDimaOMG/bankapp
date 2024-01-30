@@ -1,0 +1,25 @@
+@import '../../../../../../assets/styles/variables';
+
+
+.container{
+
+
+  .input{
+    padding: 10px;
+    padding-inline: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 100%;
+    outline: solid 1px lightgrey;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:focus{
+      outline: solid 2px $extra-color;
+    }
+    &:hover{
+      outline: solid 2px $extra-color;
+    }
+  }
+}

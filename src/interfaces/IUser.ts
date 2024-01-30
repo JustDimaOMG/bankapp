@@ -6,9 +6,6 @@ export interface IUser{
   firstName: string,
   lastName: string
   img:string,
-  // cards:[],
-  // transactions:[],
-  // goals:[],
 }
 
 export interface ILogUser {

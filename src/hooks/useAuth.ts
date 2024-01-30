@@ -6,7 +6,7 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 import { UsersService } from 'services/Users.service'
 
-type Inputs = {
+export type TInputs = {
 	username: string
 	password: string
 }
@@ -22,7 +22,7 @@ export const UseAuth = () => {
 		handleSubmit,
 		reset,
 		formState: { errors }
-	} = useForm<Inputs>({
+	} = useForm<TInputs>({
 		mode: 'onSubmit'
 	})
 

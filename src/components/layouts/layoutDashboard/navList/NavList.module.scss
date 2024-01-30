@@ -46,7 +46,7 @@
             border-radius: 5px;
             transition: 0.2s;
             &:hover{
-              color: #197BBD;
+              color: $extra-color;
               background-color: #F0F7FF;
             }
 
@@ -59,7 +59,7 @@
   }
 
   .btnActive{
-    color: #197BBD;
+    color: $extra-color;
     background-color: #F0F7FF;
   }
 }

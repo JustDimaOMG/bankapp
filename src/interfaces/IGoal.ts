@@ -7,3 +7,4 @@
   icon: string,
   title: string
  }
+

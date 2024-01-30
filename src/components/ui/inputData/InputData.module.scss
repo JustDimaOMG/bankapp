@@ -13,10 +13,10 @@
     background-color: transparent;
 
     &:hover{
-      outline: solid 2px $yellow;
+      outline: solid 2px $extra-color;
     }
     &:focus{
-      outline: solid 2px $yellow;
+      outline: solid 2px $extra-color;
     }
   }
   margin-bottom: 10px;
@@ -35,10 +35,10 @@
     justify-content: space-between;
     align-items: center;
     &:focus{
-      outline: solid 2px $yellow;
+      outline: solid 2px $extra-color;
     }
     &:hover{
-      outline: solid 2px $yellow;
+      outline: solid 2px $extra-color;
     }
 
     
@@ -65,10 +65,10 @@
     outline: solid 1px lightgrey;
     background-color: transparent;
     &:hover{
-      outline: solid 2px $yellow;
+      outline: solid 2px $extra-color;
     }
     &:focus{
-      outline: solid 2px $yellow;
+      outline: solid 2px $extra-color;
     }
   }
 }

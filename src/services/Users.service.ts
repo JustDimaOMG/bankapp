@@ -5,10 +5,7 @@ import { nanoid } from 'nanoid'
 
 import { TOKEN } from '../constants/app.constants'
 
-
 export const UsersService = {
-
-
 	async PostUser(userData: ILogUser) {
 		const newUser = {
 			id: nanoid(12),
@@ -58,10 +55,21 @@ export const UsersService = {
 					return "The password isn't match"
 				} else {
 					const receiveData = data[0]
-					Cookies.set(TOKEN, receiveData.id)					
+					Cookies.set(TOKEN, receiveData.id)
 					return receiveData
 				}
 			}
+		} catch (error) {
+			console.log(error)
+		}
+	},
+
+	async GetAllUsers(){
+		try {
+			const { data: exisitingUsers } = await $axiosServer.get('users')
+			if (exisitingUsers && exisitingUsers.length !== 0) {
+				return exisitingUsers.length
+			}else return 0
 		} catch (error) {
 			console.log(error)
 		}

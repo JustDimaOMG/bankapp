@@ -1,12 +1,12 @@
 import ToggleMode from 'components/ui/toggleMode/ToggleMode'
 
 import s from './Header.module.scss'
-import { useSelector } from 'react-redux'
 import AccountBlock from 'components/layouts/layoutDashboard/topPanel/accountBlock/AccountBlock'
+import { useAppSelector } from 'hooks/useActions'
 
 const UserNavBar = () => {
 
-	const isAuth = useSelector(state => state.auth.userState.isAuth)
+	const isAuth = useAppSelector(state => state.auth.userState.isAuth)
 
 	return (
 		<>

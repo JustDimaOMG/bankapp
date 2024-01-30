@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 
 import s from './InputData.module.scss'
+import { UseFormRegister } from 'react-hook-form'
+import { TInputs } from 'hooks/useAuth'
 
 interface InputProps {
-	register?: any
-	name?: string
+	register: UseFormRegister<TInputs> | undefined
+	name: string
 	options?: {
 		required: string
 		minLength?: {
@@ -18,7 +20,7 @@ interface InputProps {
 		}
 	}
 	type: string
-	error?: string | undefined
+	error: string | undefined
 }
 
 const InputData: React.FC<
@@ -28,42 +30,35 @@ const InputData: React.FC<
 
 	return (
 		<>
-			{name === 'username' ? (
-				<div className={s.emailCont}>
-					<input
-						{...register(name, options)}
-						type={type}
-						{...rest}
-						className={s.inputEmail}
-						autoComplete='email'
-					/>
-					{error && <div className='error'>{error}</div>}
-				</div>
-			) : name === 'password' ? (
+			{name === 'password' ? (
 				<div className={s.passCont}>
-					<div className={s.inputContainer}>
-						<input
-            autoComplete='off'
-							{...register(name, options)}
-							type={isShow ? 'text' : type}
-							{...rest}
-							className={s.inputPass}
-						/>
-						<button onClick={() => setIsShow(!isShow)} type='button'>
-							{isShow ? (
-								<FaEye className={s.iconEye} />
-							) : (
-								<FaEyeSlash className={s.iconEye} />
-							)}
-						</button>
-					</div>
-					{error && <div className='error'>{error}</div>}
+				<div className={s.inputContainer}>
+					<input
+					autoComplete='off'
+						{...register(name, options)}
+						type={isShow ? 'text' : type}
+						{...rest}
+						className={s.inputPass}
+					/>
+					<button onClick={() => setIsShow(!isShow)} type='button'>
+						{isShow ? (
+							<FaEye className={s.iconEye} />
+						) : (
+							<FaEyeSlash className={s.iconEye} />
+						)}
+					</button>
 				</div>
-			) : (
-				<div>
-					<div className={s.justCont}>
-						<input type={type} {...rest} className={s.inputJust} />
-					</div>
+				{error && <div className='error'>{error}</div>}
+				</div>
+			) :  (
+				<div className={s.emailCont}>
+				<input
+					{...register(name, options)}
+					type={type}
+					{...rest}
+					className={s.inputEmail}
+				/>
+				{error && <div className='error'>{error}</div>}
 				</div>
 			)}
 		</>
@@ -71,3 +66,5 @@ const InputData: React.FC<
 }
 
 export default InputData
+
+

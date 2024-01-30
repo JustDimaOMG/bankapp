@@ -1,6 +1,6 @@
 import Layout from 'components/layouts/layout/Layout'
+import FormBtn from 'components/ui/formBtn/FormBtn'
 import InputData from 'components/ui/inputData/InputData'
-import OrangeBtn from 'components/ui/orangeBtn/OrangeBtn'
 import { UseAuth } from 'hooks/useAuth'
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
@@ -31,6 +31,7 @@ const SignUp = () => {
 						<InputData
 							defaultValue={email}
 							error={errors?.username?.message}
+							autoComplete='email'
 							name='username'
 							register={register}
 							options={{
@@ -58,12 +59,8 @@ const SignUp = () => {
 							placeholder='Enter password'
 						/>
 					</div>
-					{error && 
-						<span className='errorData' >
-							{error}
-						</span>
-					}
-					<OrangeBtn
+					{error && <span className='errorData'>{error}</span>}
+					<FormBtn
 						text={'SignUp'}
 						type={'submit'}
 						fontSize={'18px'}
