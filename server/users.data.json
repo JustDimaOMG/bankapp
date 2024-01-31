@@ -78,11 +78,26 @@
   ],
   "goals": [
     {
-      "id": "-wSNVb0_sN4e",
-      "amount": "550",
-      "date": "13/10/24",
-      "icon": "1",
-      "title": "Holidays"
+      "id": "msJgyJad6jcr",
+      "title": "car",
+      "amount": "990",
+      "date": "01/31/24",
+      "icon": "2"
+    },
+    {
+      "id": "msJgyJad6jcr",
+      "title": "house",
+      "amount": "19000",
+      "date": "02/03/24",
+      "icon": "4"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "-VVBwUjaVavf",
+      "history": [
+        {}
+      ]
     }
   ]
 }

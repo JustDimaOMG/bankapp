@@ -12,7 +12,7 @@ const GoalComp = (props: IGoal) => {
         <span>{props.date}</span>
       </div>
       <div className={s.low}>
-        {icon && <img src={icon.icon} alt='icon' className={s.icon} />}
+        {icon && <img src={icon.icon} alt='icon' className={s.icon} draggable={false}/>}
         <span>{props.title}</span>
       </div>
     </div>

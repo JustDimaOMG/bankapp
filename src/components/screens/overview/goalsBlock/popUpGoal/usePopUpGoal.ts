@@ -14,9 +14,8 @@ export const usePopUpGoal = () => {
       dataGoal.id = id
       return DashboardService.PostGoal(dataGoal)
     },
-    onSuccess: data => {
+    onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['goals'] })
-      console.log(data, 'ok', );
     }
   })
 

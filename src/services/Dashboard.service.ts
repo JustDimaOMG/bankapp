@@ -31,10 +31,7 @@ export const DashboardService = {
 
 	async PostGoal(dataGoal: IGoal) {
 		try {
-			const { data } = await $axiosServer.post(`goals`, dataGoal)
-
-      console.log(dataGoal, data, "зщые");
-      
+			const { data } = await $axiosServer.post(`goals`, dataGoal)      
 
 			return data
 		} catch (error) {

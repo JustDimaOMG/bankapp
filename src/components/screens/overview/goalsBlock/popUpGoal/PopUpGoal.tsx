@@ -1,7 +1,7 @@
 import FormBtn from 'components/ui/formBtn/FormBtn'
 import { icons } from 'data/icons.data'
 import { format } from 'date-fns'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import ReactDatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
@@ -14,7 +14,7 @@ import { usePopUpGoal } from './usePopUpGoal'
 export type TInputs = {
 	title: string
 	amount: string
-	date: Date
+	date: string
 	icon: string
 }
 
@@ -39,13 +39,14 @@ const PopUpGoal = (props: Props) => {
 
 	const onSubmit: SubmitHandler<TInputs> = async userData => {
 		if (userData.date) {
-			userData.date = format(userData.date, 'MM/dd/yy')
+			const formattedDate = format(new Date(userData.date), 'MM/dd/yy')
+			userData.date = formattedDate
 			mutate(userData)
 			props.setIsShow(false)
 			reset()
+			console.log(userData)
 		}
 	}
-
 
 	return (
 		<div className={s.container}>
@@ -77,8 +78,11 @@ const PopUpGoal = (props: Props) => {
 					<Controller
 						control={control}
 						name='date'
-						render={({ field }) => {
-							field.value = startDate
+						render={({
+							field
+						}: {
+							field: { value: string; onChange: (date: string) => void }
+						}) => {
 							return (
 								<ReactDatePicker
 									className={s.datePicker}
@@ -87,13 +91,16 @@ const PopUpGoal = (props: Props) => {
 									isClearable
 									onChange={(date: Date) => {
 										setStartDate(date)
-										field.onChange(date)
+										field.onChange(format(date, 'MM/dd/yy'))
 									}}
 									placeholderText='Select date'
 								/>
 							)
 						}}
+						defaultValue={format(startDate, 'MM/dd/yy')} 
+
 					/>
+
 					<IconSelect
 						icons={icons}
 						selectedIcon={selectedIcon}

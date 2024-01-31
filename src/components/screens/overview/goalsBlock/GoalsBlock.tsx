@@ -10,34 +10,35 @@ import PopUpGoal from './popUpGoal/PopUpGoal'
 import { useGoalsBlock } from './useGoalsBlock'
 
 const GoalsBlock = () => {
-	const [error, setError] = useState<string | null>(null)
-	const goalsData = useAppSelector(state => state.goals.goalState) || []
 
-	useGoalsBlock(setError)
+	const data = useGoalsBlock()
+	
+	const goalsData = useAppSelector(state => state.goals.goalState) || []
 
 	const [startSlide, setStartSlide] = useState(0)
 	const slidesToShow = 3
 
 	const prevSlide = () => {
-		setStartSlide(prev => Math.max(prev - 1, 0))
+		if (goalsData.length > 0) {
+			setStartSlide(prev => Math.max(prev - 1, 0))
+		}
 	}
 
 	const nextSlide = () => {
-		setStartSlide(prev => Math.min(prev + 1, goalsData.length - slidesToShow))
+		if (goalsData.length > 0) {
+			setStartSlide(prev => Math.min(prev + 1, goalsData.length - slidesToShow))
+		}
 	}
 
-	// const { isShow, ref, setIsShow } = useOnClickOutside({
-	// 	isInitialValue: false
-	// })
-	// ref={ref as React.RefObject<HTMLDivElement>}
-
-	const [isShow, setIsShow] = useState(false)
+	const { isShow, ref, setIsShow } = useOnClickOutside({
+		isInitialValue: false
+	})
 
 	return (
 		<div className={s.container}>
 			<div className={s.upperBlock}>
 				<h3 className='titleBlock'>Goals</h3>
-				<div >
+				<div ref={ref as React.RefObject<HTMLDivElement>}>
 					<button className={s.addGoal} onClick={() => setIsShow(!isShow)}>
 						<IoAdd />
 					</button>
@@ -51,7 +52,7 @@ const GoalsBlock = () => {
 				</div>
 			</div>
 			<div className={s.lowerBlock}>
-				{!error && goalsData.length >= 0 ? (
+				{typeof data !== 'string' ? (
 					<>
 						{startSlide !== 0 && (
 							<div className={s.leftArrow}>
@@ -79,7 +80,7 @@ const GoalsBlock = () => {
 						)}
 					</>
 				) : (
-					<div>{error}</div>
+					<div>{data}</div>
 				)}
 			</div>
 		</div>

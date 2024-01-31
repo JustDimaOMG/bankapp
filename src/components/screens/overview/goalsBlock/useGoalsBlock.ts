@@ -1,23 +1,24 @@
-import { useQuery } from "@tanstack/react-query";
-import { TOKEN } from "../../../../constants/app.constants";
-import { DashboardService } from "services/Dashboard.service";
-import Cookies from 'js-cookie';
-import { useActions } from "hooks/useActions";
+import { useQuery } from '@tanstack/react-query'
+import { useActions } from 'hooks/useActions'
+import Cookies from 'js-cookie'
+import { DashboardService } from 'services/Dashboard.service'
 
-export const useGoalsBlock = async (setError: React.Dispatch<React.SetStateAction<string | null>>) => {
-  const action = useActions()
-  const id = Cookies.get(TOKEN) || '';
+import { TOKEN } from '../../../../constants/app.constants'
 
-  const { data } = await useQuery({
-    queryKey: ["goals"],
-    queryFn: () => DashboardService.GetGoals(id),
-  });
-  
-  if (typeof data === 'string') {
-    setError(data);
-  } else {
-    action.enterGoals(data);
-  }
+export const useGoalsBlock = async ()  => {
+	const action = useActions()
+	const id = Cookies.get(TOKEN) || ''
+	const { data } = await useQuery({
+		queryKey: ['goals'],
+		queryFn: () => DashboardService.GetGoals(id)
+	})
+	if (data){
+		if (typeof data === 'string') {
+			return data
+		} else {
+			action.enterGoals(data)
+			return data
+		}
+	}
 
-  return data;
-};
+}
