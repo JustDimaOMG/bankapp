@@ -1,5 +1,4 @@
 import { useAppSelector } from 'hooks/useActions'
-import { useState } from 'react'
 
 import s from './CardsBlock.module.scss'
 import CardCalc from './cardCalc/CardCalc'
@@ -8,15 +7,14 @@ import SwiperCard from './swiperCard/SwiperCard'
 import { useCardBlock } from './useCardBlock'
 
 const CardsBlock = () => {
-	const [error, setError] = useState<string | null>(null)
 	const cardData = useAppSelector(state => state.cards.cardState) || []
 
-	useCardBlock(setError)
+	useCardBlock()
 
 	return (
 		<div className={s.container}>
 			<h3 className='titleBlock'>Cards</h3>
-			{!error && cardData.length > 0 ? (
+			{ cardData.length > 0 ? (
 				<>
 					<div className={s.cardInfo}>
 						<SwiperCard />
@@ -28,7 +26,7 @@ const CardsBlock = () => {
 					</div>
 				</>
 			) : (
-				<div>{error}</div>
+				<div>You don't have any cards yet</div>
 			)}
 		</div>
 	)

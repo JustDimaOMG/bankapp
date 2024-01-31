@@ -31,9 +31,27 @@ export const DashboardService = {
 
 	async PostGoal(dataGoal: IGoal) {
 		try {
-			const { data } = await $axiosServer.post(`goals`, dataGoal)      
+			const { data } = await $axiosServer.post(`goals`, dataGoal)
 
 			return data
+		} catch (error) {
+			console.log(error)
+		}
+	},
+
+	async GetTransactions(id: string) {
+		try {
+			const { data: exisitingTransactions } = await $axiosServer.get(
+				`transactions?id=${id}`
+			)
+
+			if (exisitingTransactions && exisitingTransactions.length === 0) {
+				
+				return "You don't have any transactions yet"
+			}
+
+			return exisitingTransactions
+
 		} catch (error) {
 			console.log(error)
 		}

@@ -6,12 +6,14 @@ import { AppDispatch, RootState } from "store/store";
 import * as themeActions from 'store/themeSlice'; 
 import * as cardsActions from 'store/cardsSlice'; 
 import * as goalsActions from 'store/goalsSlice'; 
+import * as transactionsActions from 'store/transactionsSlice'; 
 
 const rootActions = {
   ...authActions,
   ...themeActions,
   ...cardsActions,
-  ...goalsActions
+  ...goalsActions,
+  ...transactionsActions
 };
 
 export const useActions = () => {

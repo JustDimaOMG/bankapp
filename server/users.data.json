@@ -78,26 +78,90 @@
   ],
   "goals": [
     {
-      "id": "msJgyJad6jcr",
-      "title": "car",
-      "amount": "990",
-      "date": "01/31/24",
+      "id": "-wSNVb0_sN4e",
+      "title": "Car",
+      "amount": "2990",
+      "date": "02/01/24",
       "icon": "2"
     },
     {
-      "id": "msJgyJad6jcr",
+      "id": "-wSNVb0_sN4e",
       "title": "house",
-      "amount": "19000",
-      "date": "02/03/24",
+      "amount": "8900",
+      "date": "03/02/24",
+      "icon": "1"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "title": "tree",
+      "amount": "6790",
+      "date": "02/01/24",
+      "icon": "10"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "title": "iphone",
+      "amount": "890",
+      "date": "02/22/24",
       "icon": "4"
     }
   ],
   "transactions": [
     {
-      "id": "-VVBwUjaVavf",
-      "history": [
-        {}
-      ]
+      "id": "-wSNVb0_sN4e",
+      "receiver": "Magnit",
+      "type": "Market",
+      "date": "15 Jan 2024",
+      "amount": "132"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "receiver": "Apple",
+      "type": "App Store",
+      "date": "20 Jan 2024",
+      "amount": "29"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "receiver": "CDEK",
+      "type": "Delivery",
+      "date": "19 Jan 2024",
+      "amount": "89"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "receiver": "Lamoda",
+      "type": "Shopping",
+      "date": "10 Jan 2024",
+      "amount": "327"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "receiver": "Master and Margarita",
+      "type": "Restaurant",
+      "date": "10 Jan 2024",
+      "amount": "327"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "receiver": "Elon Musk",
+      "type": "Transfer",
+      "date": "13 Jan 2024",
+      "amount": "5870"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "receiver": "Lamoda",
+      "type": "Shopping",
+      "date": "10 Jan 2024",
+      "amount": "327"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "receiver": "Lamoda",
+      "type": "Shopping",
+      "date": "10 Jan 2024",
+      "amount": "327"
     }
   ]
 }

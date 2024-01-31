@@ -1,0 +1,36 @@
+
+@import '../../../../assets//styles/variables';
+
+.container{
+  padding: 25px;
+  padding-inline: 35px;
+  background-color: white;
+  box-shadow: $bx-accent;
+  border-radius: 25px;
+  height: 323px;
+  h3{
+    margin-bottom: 18px;
+  }
+
+
+  .inner{
+
+    .topic{
+      display: flex;  
+      justify-content: space-between;
+      align-items: center;
+      color: $light-accent;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    .historyList{
+
+      ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-y: hidden;
+      }
+    }
+  }
+}

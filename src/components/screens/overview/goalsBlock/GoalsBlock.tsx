@@ -10,9 +10,8 @@ import PopUpGoal from './popUpGoal/PopUpGoal'
 import { useGoalsBlock } from './useGoalsBlock'
 
 const GoalsBlock = () => {
+	useGoalsBlock()
 
-	const data = useGoalsBlock()
-	
 	const goalsData = useAppSelector(state => state.goals.goalState) || []
 
 	const [startSlide, setStartSlide] = useState(0)
@@ -52,7 +51,7 @@ const GoalsBlock = () => {
 				</div>
 			</div>
 			<div className={s.lowerBlock}>
-				{typeof data !== 'string' ? (
+				{goalsData.length > 0 ? (
 					<>
 						{startSlide !== 0 && (
 							<div className={s.leftArrow}>
@@ -80,7 +79,7 @@ const GoalsBlock = () => {
 						)}
 					</>
 				) : (
-					<div>{data}</div>
+					<div>You don't have any goals yet</div>
 				)}
 			</div>
 		</div>

@@ -1,0 +1,43 @@
+@import '../../../../../assets/styles/variables';
+
+.container{
+display: flex;
+justify-content: space-between;
+width: 100%;
+align-items: center;
+font-size: 14px;
+height: 30px;
+
+  .receiver{
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 5px ;
+    width: 120px;
+    img{
+      background-color: #EFEFEF;
+      padding: 3px;
+      border-radius: 5px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .type{
+    color: $light-accent;
+    width: 100px;
+  }
+  .date{
+    color: $light-accent;
+    width: 100px;
+
+
+  }
+  .amount {
+    display: flex;
+    justify-content: flex-end;
+    color: black;
+    font-weight: 600;
+    width: 70px;
+
+  }
+}

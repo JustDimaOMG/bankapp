@@ -44,7 +44,6 @@ const PopUpGoal = (props: Props) => {
 			mutate(userData)
 			props.setIsShow(false)
 			reset()
-			console.log(userData)
 		}
 	}
 

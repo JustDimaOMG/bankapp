@@ -5,14 +5,14 @@ import { DashboardService } from 'services/Dashboard.service'
 
 import { TOKEN } from '../../../../constants/app.constants'
 
-export const useGoalsBlock = async ()  => {
+export const useGoalsBlock = async () => {
 	const action = useActions()
 	const id = Cookies.get(TOKEN) || ''
 	const { data } = await useQuery({
 		queryKey: ['goals'],
 		queryFn: () => DashboardService.GetGoals(id)
 	})
-	if (data){
+	if (data) {
 		if (typeof data === 'string') {
 			return data
 		} else {
@@ -20,5 +20,4 @@ export const useGoalsBlock = async ()  => {
 			return data
 		}
 	}
-
 }
