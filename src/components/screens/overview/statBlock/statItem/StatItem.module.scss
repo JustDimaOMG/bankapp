@@ -1,0 +1,58 @@
+@import '../../../../../assets/styles/variables';
+
+.container{
+  z-index: 0;
+
+  .inner{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 5px;
+      background-color: #F1F1F1;
+      box-shadow: 0px 0px 5px -3px #000000;
+    }
+
+    .rangeCont{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .range{
+        width: 380px;
+        height: 10px;
+        position: relative;  
+        .progressWidth {
+          width: 380px;
+          height: 10px;
+          background-color: #F1F1F1;
+          border-radius: 25px;
+        }
+        
+        .progressBar {
+          height: 10px;
+          border-radius: 25px;
+          position: absolute;  
+          bottom: 0;
+        }
+      }
+      .rangeText{
+        font-size: 14px;
+        color: $light-accent;
+
+      }
+    }
+
+    .percent{
+      font-size: 24px;
+    }
+  }
+}
+
+
+

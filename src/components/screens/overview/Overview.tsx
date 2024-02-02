@@ -4,6 +4,7 @@ import s from './Overview.module.scss'
 import CardsBlock from './cardsBlock/CardsBlock'
 import GoalsBlock from './goalsBlock/GoalsBlock'
 import TransactionsBlock from './transactionsBlock/TransactionsBlock'
+import StatBlock from './statBlock/StatBlock'
 
 const Overview = () => {
 	return (
@@ -15,6 +16,7 @@ const Overview = () => {
 				</div>
 				<div className={s.rightSide}>
 					<GoalsBlock/>
+					<StatBlock/>
 				</div>
 			</div>
 		</LayoutDashboard>
