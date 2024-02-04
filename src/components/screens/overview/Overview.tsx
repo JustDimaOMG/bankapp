@@ -19,6 +19,7 @@ const Overview = () => {
 					<StatBlock/>
 				</div>
 			</div>
+
 		</LayoutDashboard>
 	)
 }

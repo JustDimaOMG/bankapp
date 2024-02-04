@@ -32,6 +32,8 @@
       "routes/*": ["routes/*"],
       "auth/*": ["auth/*"],
       "store/*": ["store/*"],
+      "lib/*": ["lib/*"],
+      "constants/*": ["constants/*"],
 
     }
 

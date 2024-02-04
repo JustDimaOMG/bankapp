@@ -16,6 +16,8 @@ export default defineConfig({
       routes: '/src/routes',
       auth: '/src/auth',
       store: '/src/store',
+      lib: '/src/lib',
+      constants: '/src/constants',
     }
   }
 })

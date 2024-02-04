@@ -104,6 +104,20 @@
       "amount": "890",
       "date": "02/22/24",
       "icon": "4"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "title": "house",
+      "amount": "9900",
+      "date": "02/21/24",
+      "icon": "5"
+    },
+    {
+      "id": "-wSNVb0_sN4e",
+      "title": "car",
+      "amount": "11190",
+      "date": "02/04/24",
+      "icon": "2"
     }
   ],
   "transactions": [
